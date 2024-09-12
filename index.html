@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر إلكتروني</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>متجر الستيكرات وكفرات الجوال</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#cart" id="cart-button">سلة التسوق (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>مرحبا بكم في متجرنا!</h2>
+        <p>استكشف مجموعتنا الواسعة من ستيكرات وكفرات الجوال.</p>
+    </section>
+
+    <section id="products">
+        <h2>منتجاتنا</h2>
+        <div class="product">
+            <img src="images/sticker1.jpg" alt="ستيكر 1">
+            <h3>ستيكر جميل</h3>
+            <p>سعر: 10$</p>
+
+
+            <h3>ستيكر الصقر</h3>
+            <p>سعر: 10$</p>
+
+            <button onclick="addToCart('ستيكر جميل', 10)">أضف إلى السلة</button>
+        </div>
+        <div class="product">
+            <img src="images/case1.jpg" alt="كفر جوال 1">
+            <h3>كفر جوال أنيق</h3>
+            <p>سعر: 20$</p>
+            <button onclick="addToCart('كفر جوال أنيق', 20)">أضف إلى السلة</button>
+        </div>
+    </section>
+
+    <section id="cart" style="display: none;">
+        <h2>سلة التسوق</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">الإجمالي: 0$</p>
+        <button onclick="clearCart()">مسح السلة</button>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <form id="contact-form">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 متجر الستيكرات وكفرات الجوال</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
